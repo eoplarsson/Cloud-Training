@@ -31,9 +31,10 @@ jobs:
 
 #TODO:uncomment and complete these steps to run tests and upload artifacts
       - name: Run tests and generate artifacts
+        uses: matlab-actions/run-tests@v1
           
-      - name: Upload the artifacts to GitHub
-        if: always()
+#      - name: Upload the artifacts to GitHub
+#        if: always()
       
   build-and-deploy:
     needs: run-test
