@@ -10,9 +10,9 @@ classdef SolverTest < matlab.unittest.TestCase
             expSolution = [-1+3i -1-3i];
             testCase.verifyEqual(actSolution,expSolution)
         end
-        % function nonnumericInput(testCase)
-        %     testCase.verifyError(@()quadraticSolver(1,"-3",2), ...
-        %         "quadraticSolver:InputMustBeNumeric")
-        % end
+        function nonnumericInput(testCase)
+            testCase.verifyError(@()quadraticSolver(1,"-3",2), ...
+                "quadraticSolver:InputMustBeNumeric")
+        end
     end
 end
