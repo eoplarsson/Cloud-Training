@@ -33,21 +33,9 @@ jobs:
       - name: Run tests and generate artifacts
         uses: matlab-actions/run-tests@v1
           
-      - name: Upload the artifacts to GitHub
-        if: always()
-      - uses: actions/checkout@v3
-
-      - run: mkdir -p pathtoartifact
-
-      - run: echo hello > pathtoartifact/world.txt
-
-#      - uses: actions/upload-artifact@v3
-#        with:
-#          name: my-artifact
-#          path: path/to/artifact/world.txt
-        
-
-        
+#      - name: Upload the artifacts to GitHub
+#        if: always()
+            
   build-and-deploy:
     needs: run-test
     runs-on: ubuntu-latest
